@@ -1,4 +1,4 @@
-package net.artyrian.frontiers.mixin.item;
+package net.artyrian.frontiers.definition.item;
 
 import com.google.common.base.Suppliers;
 import net.minecraft.core.Holder;
@@ -26,9 +26,39 @@ public class DamageArmorItem extends ArmorItem
                     EquipmentSlotGroup attributeModifierSlot = EquipmentSlotGroup.bySlot(type.getSlot());
                     ResourceLocation identifier = ResourceLocation.withDefaultNamespace("armor." + type.getName());
 
+                    // Armor
+                    int armor = material.value().getDefense(type);
+                    builder.add(
+                            Attributes.ARMOR,
+                            new AttributeModifier(identifier, armor, AttributeModifier.Operation.ADD_VALUE),
+                            attributeModifierSlot
+                    );
+                    // Toughness
+                    float toughness = material.value().toughness();
+                    builder.add(
+                            Attributes.ARMOR_TOUGHNESS,
+                            new AttributeModifier(identifier, toughness, AttributeModifier.Operation.ADD_VALUE),
+                            attributeModifierSlot
+                    );
+                    // KB Resist
+                    float kb_resist = material.value().knockbackResistance();
+                    if (kb_resist > 0.0F) {
+                        builder.add(
+                                Attributes.KNOCKBACK_RESISTANCE,
+                                new AttributeModifier(identifier, kb_resist, AttributeModifier.Operation.ADD_VALUE),
+                                attributeModifierSlot
+                        );
+                    }
+
                     builder.add(
                             Attributes.ATTACK_DAMAGE,
                             new AttributeModifier(identifier, 1.0, AttributeModifier.Operation.ADD_VALUE),
+                            attributeModifierSlot
+                    );
+
+                    builder.add(
+                            Attributes.MOVEMENT_SPEED,
+                            new AttributeModifier(identifier, -0.05, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                             attributeModifierSlot
                     );
 

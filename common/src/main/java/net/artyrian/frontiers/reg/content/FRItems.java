@@ -2,6 +2,7 @@ package net.artyrian.frontiers.reg.content;
 
 import net.artyrian.frontiers.Frontiers;
 import net.artyrian.frontiers.definition.data.nbt_sync.PlayerPersistentNBT;
+import net.artyrian.frontiers.definition.item.HealthArmorItem;
 import net.artyrian.frontiers.definition.item.component.BottleContentComponent;
 import net.artyrian.frontiers.definition.item.custom.*;
 import net.artyrian.frontiers.definition.item.custom.armor.PlateArmorItem;
@@ -13,8 +14,8 @@ import net.artyrian.frontiers.definition.item.custom.tomes.EvokerTomeItem;
 import net.artyrian.frontiers.definition.item.custom.tomes.TomeItem;
 import net.artyrian.frontiers.definition.item.custom.tool.*;
 import net.artyrian.frontiers.definition.util.SmithTemplate;
-import net.artyrian.frontiers.mixin.item.DamageArmorItem;
-import net.artyrian.frontiers.mixin.item.SpeedArmorItem;
+import net.artyrian.frontiers.definition.item.DamageArmorItem;
+import net.artyrian.frontiers.definition.item.SpeedArmorItem;
 import net.artyrian.frontiers.mixin_intf.BobberType;
 import net.artyrian.frontiers.reg.misc.FRDataComponents;
 import net.artyrian.frontiers.reg.misc.FRRegistries;
@@ -265,10 +266,10 @@ public class FRItems
     public static final Supplier<Item> COBALT_LEGGINGS = registerItem( "cobalt_leggings", () -> new ArmorItem(FRArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(41))));
     public static final Supplier<Item> COBALT_BOOTS = registerItem( "cobalt_boots", () -> new ArmorItem(FRArmorMaterials.COBALT_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(41))));
     // Verdinite
-    public static final Supplier<Item> VERDINITE_HELMET = registerItem( "verdinite_helmet", () -> new ArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
-    public static final Supplier<Item> VERDINITE_CHESTPLATE = registerItem( "verdinite_chestplate", () -> new ArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
-    public static final Supplier<Item> VERDINITE_LEGGINGS = registerItem( "verdinite_leggings", () -> new ArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
-    public static final Supplier<Item> VERDINITE_BOOTS = registerItem( "verdinite_boots", () -> new ArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
+    public static final Supplier<Item> VERDINITE_HELMET = registerItem( "verdinite_helmet", () -> new HealthArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
+    public static final Supplier<Item> VERDINITE_CHESTPLATE = registerItem( "verdinite_chestplate", () -> new HealthArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
+    public static final Supplier<Item> VERDINITE_LEGGINGS = registerItem( "verdinite_leggings", () -> new HealthArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.LEGGINGS, new Item.Properties().durability(ArmorItem.Type.LEGGINGS.getDurability(45))));
+    public static final Supplier<Item> VERDINITE_BOOTS = registerItem( "verdinite_boots", () -> new HealthArmorItem(FRArmorMaterials.VERDINITE_ARMOR_MATERIAL, ArmorItem.Type.BOOTS, new Item.Properties().durability(ArmorItem.Type.BOOTS.getDurability(45))));
     // Frostite
     public static final Supplier<Item> FROSTITE_HELMET = registerItem( "frostite_helmet", () -> new SpeedArmorItem(FRArmorMaterials.FROSTITE_ARMOR_MATERIAL, ArmorItem.Type.HELMET, new Item.Properties().durability(ArmorItem.Type.HELMET.getDurability(45))));
     public static final Supplier<Item> FROSTITE_CHESTPLATE = registerItem( "frostite_chestplate", () -> new SpeedArmorItem(FRArmorMaterials.FROSTITE_ARMOR_MATERIAL, ArmorItem.Type.CHESTPLATE, new Item.Properties().durability(ArmorItem.Type.CHESTPLATE.getDurability(45))));
