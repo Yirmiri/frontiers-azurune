@@ -232,7 +232,7 @@ public class FRItems
     // Frostite
     public static final Supplier<Item> FROSTITE_PICKAXE = registerItem("frostite_pickaxe", () -> new PickaxeItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(PickaxeItem.createAttributes(FRToolMaterial.FROSTITE, 1.0F, -2.8F))));
     public static final Supplier<Item> FROSTITE_AXE = registerItem("frostite_axe", () -> new AxeItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(AxeItem.createAttributes(FRToolMaterial.FROSTITE, 5.0F, -3.0F))));
-    public static final Supplier<Item> FROSTITE_SWORD = registerItem("frostite_sword", () -> new SwordItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(SwordItem.createAttributes(FRToolMaterial.FROSTITE, 3, -2.4F))));
+    public static final Supplier<Item> FROSTITE_SWORD = registerItem("frostite_sword", () -> new SwordItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(SwordItem.createAttributes(FRToolMaterial.FROSTITE, 3, -2.2F))));
     public static final Supplier<Item> FROSTITE_SHOVEL = registerItem("frostite_shovel", () -> new ShovelItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(ShovelItem.createAttributes(FRToolMaterial.FROSTITE, 1.5F, -3.0F))));
     public static final Supplier<Item> FROSTITE_HOE = registerItem("frostite_hoe", () -> new HoeItem(FRToolMaterial.FROSTITE, new Item.Properties().attributes(HoeItem.createAttributes(FRToolMaterial.FROSTITE, -6.0F, 1.0F))));
     // Vivulite
