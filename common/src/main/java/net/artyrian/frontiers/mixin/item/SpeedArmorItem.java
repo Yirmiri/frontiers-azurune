@@ -1,7 +1,6 @@
-package net.artyrian.frontiers.definition.item.custom.armor;
+package net.artyrian.frontiers.mixin.item;
 
 import com.google.common.base.Suppliers;
-import java.util.function.Supplier;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EquipmentSlotGroup;
@@ -11,14 +10,15 @@ import net.minecraft.world.item.ArmorItem;
 import net.minecraft.world.item.ArmorMaterial;
 import net.minecraft.world.item.component.ItemAttributeModifiers;
 
-public class PlateArmorItem extends ArmorItem
+import java.util.function.Supplier;
+
+public class SpeedArmorItem extends ArmorItem
 {
     private final Supplier<ItemAttributeModifiers> attributeModifiers;
 
-    public PlateArmorItem(Holder<ArmorMaterial> material, Type type, Properties settings)
+    public SpeedArmorItem(Holder<ArmorMaterial> material, Type type, Properties settings)
     {
         super(material, type, settings);
-        // Does health instead of armor
         this.attributeModifiers = Suppliers.memoize(
                 () -> {
                     // Basic builder for all
@@ -26,23 +26,11 @@ public class PlateArmorItem extends ArmorItem
                     EquipmentSlotGroup attributeModifierSlot = EquipmentSlotGroup.bySlot(type.getSlot());
                     ResourceLocation identifier = ResourceLocation.withDefaultNamespace("armor." + type.getName());
 
-                    // Health
-                    int armor = material.value().getDefense(type);
                     builder.add(
-                            Attributes.MAX_HEALTH,
-                            new AttributeModifier(identifier, armor, AttributeModifier.Operation.ADD_VALUE),
+                            Attributes.MOVEMENT_SPEED,
+                            new AttributeModifier(identifier, 0.8, AttributeModifier.Operation.ADD_MULTIPLIED_BASE),
                             attributeModifierSlot
                     );
-                    builder.add(
-                            Attributes.MINING_EFFICIENCY,
-                            new AttributeModifier(identifier, 0.33, AttributeModifier.Operation.ADD_VALUE),
-                            attributeModifierSlot
-                    );
-//                    builder.add(
-//                            Attributes.BLOCK_INTERACTION_RANGE,
-//                            new AttributeModifier(identifier, 0.25, AttributeModifier.Operation.ADD_VALUE),
-//                            attributeModifierSlot
-//                    );
 
                     return builder.build();
                 }

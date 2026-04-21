@@ -248,16 +248,20 @@ public class FRLootTableProvider extends FabricBlockLootTableProvider
         // All ores
         add(FRBlocks.COBALT_ORE.get(), block -> createOreDrop(block, FRItems.RAW_COBALT.get()));
         add(FRBlocks.DEEPSLATE_COBALT_ORE.get(), block -> createOreDrop(block, FRItems.RAW_COBALT.get()));
+
         add(FRBlocks.VERDINITE_ORE.get(), block -> createOreDrop(block, FRItems.RAW_VERDINITE.get())
                 .apply(LimitCount.limitCount(IntRange.upperBound(3))));
         add(FRBlocks.DEEPSLATE_VERDINITE_ORE.get(), block -> createOreDrop(block, FRItems.RAW_VERDINITE.get())
                 .apply(LimitCount.limitCount(IntRange.upperBound(3))));
+
         add(FRBlocks.VIVULITE_ORE.get(), block -> createOreDrop(block, FRItems.RAW_VIVULITE.get())
                 .apply(LimitCount.limitCount(IntRange.upperBound(2))));
         add(FRBlocks.DEEPSLATE_VIVULITE_ORE.get(), block -> createOreDrop(block, FRItems.RAW_VIVULITE.get())
                 .apply(LimitCount.limitCount(IntRange.upperBound(2))));
+
         add(FRBlocks.BLACK_EMERALD_ORE.get(), block -> createOreDrop(block, FRItems.BLACK_EMERALD.get()));
         add(FRBlocks.DEEPSLATE_BLACK_EMERALD_ORE.get(), block -> createOreDrop(block, FRItems.BLACK_EMERALD.get()));
+
         add(FRBlocks.BRIMTAN_ORE.get(), block -> createOreDrop(block, FRItems.BRIMTAN_CLUSTER.get())
                 .apply(LimitCount.limitCount(IntRange.upperBound(2))));
 

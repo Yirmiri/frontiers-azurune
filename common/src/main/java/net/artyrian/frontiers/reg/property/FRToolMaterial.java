@@ -15,13 +15,13 @@ public enum FRToolMaterial implements Tier
 {
     // Tool mats
     // Add 235 per durability
-    COBALT(FRTags.Blocks.INCORRECT_FOR_COBALT_TOOL, 2501, 9.0f, 5.0f, 17, () -> Ingredient.of(FRItems.COBALT_INGOT.get())),
-    VERDINITE(FRTags.Blocks.INCORRECT_FOR_VERDINITE_TOOL, 2736, 9.0f, 6.0f, 12, () -> Ingredient.of(FRItems.VERDINITE_INGOT.get())),
-    FROSTITE(FRTags.Blocks.INCORRECT_FOR_VERDINITE_TOOL, 2736, 9.0f, 6.0f, 18, () -> Ingredient.of(FRItems.FROSTITE_INGOT.get())),
-    VIVULITE(FRTags.Blocks.INCORRECT_FOR_VIVULITE_TOOL, 2971, 9.0f, 7.0f, 20, () -> Ingredient.of(FRItems.VIVULITE_INGOT.get())),
-    BRIMTAN(FRTags.Blocks.INCORRECT_FOR_VIVULITE_TOOL, 3206, 10.0f, 8.0f, 12, () -> Ingredient.of(FRItems.BRIMTAN_INGOT.get())),
-    MOURNING_GOLD(BlockTags.INCORRECT_FOR_IRON_TOOL, 875, 7.0f, 2.5f, 15, () -> Ingredient.of(FRItems.MOURNING_GOLD_INGOT.get())),
-    OBSIDIAN(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 125, 12.0f, 3.0f, 22, () -> Ingredient.of(Items.OBSIDIAN));
+    COBALT(FRTags.Blocks.INCORRECT_FOR_COBALT_TOOL, 2501, 8.0f, 4.5f, 17, () -> Ingredient.of(FRItems.COBALT_INGOT.get())),
+    VERDINITE(FRTags.Blocks.INCORRECT_FOR_VERDINITE_TOOL, 2736, 8.5f, 5.0f, 12, () -> Ingredient.of(FRItems.VERDINITE_INGOT.get())),
+    FROSTITE(FRTags.Blocks.INCORRECT_FOR_VERDINITE_TOOL, 2736, 9.0f, 5.0f, 18, () -> Ingredient.of(FRItems.FROSTITE_INGOT.get())),
+    VIVULITE(FRTags.Blocks.INCORRECT_FOR_VIVULITE_TOOL, 2971, 9.0f, 5.5f, 20, () -> Ingredient.of(FRItems.VIVULITE_INGOT.get())),
+    BRIMTAN(FRTags.Blocks.INCORRECT_FOR_VIVULITE_TOOL, 3206, 9.5f, 6.0f, 12, () -> Ingredient.of(FRItems.BRIMTAN_INGOT.get())),
+    MOURNING_GOLD(BlockTags.INCORRECT_FOR_IRON_TOOL, 875, 10.0f, 2.5f, 15, () -> Ingredient.of(FRItems.MOURNING_GOLD_INGOT.get())),
+    OBSIDIAN(BlockTags.INCORRECT_FOR_DIAMOND_TOOL, 125, 12.0f, 3.5f, 22, () -> Ingredient.of(Items.OBSIDIAN));
 
     private final TagKey<Block> inverseTag;
     private final int itemDurability;

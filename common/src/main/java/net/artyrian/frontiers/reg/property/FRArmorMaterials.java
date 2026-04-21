@@ -54,46 +54,46 @@ public class FRArmorMaterials
     public static final Holder<ArmorMaterial> VERDINITE_ARMOR_MATERIAL = registerArmorMaterial("verdinite",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->
             {
-                map.put(ArmorItem.Type.BOOTS, 5);
-                map.put(ArmorItem.Type.LEGGINGS, 8);
-                map.put(ArmorItem.Type.CHESTPLATE, 10);
-                map.put(ArmorItem.Type.HELMET, 5);
-                map.put(ArmorItem.Type.BODY, 17);
+                map.put(ArmorItem.Type.BOOTS, 4);
+                map.put(ArmorItem.Type.LEGGINGS, 7);
+                map.put(ArmorItem.Type.CHESTPLATE, 9);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BODY, 14);
             }), 13, SoundEvents.ARMOR_EQUIP_DIAMOND, () -> Ingredient.of(FRItems.VERDINITE_INGOT.get()),
-                    List.of(new ArmorMaterial.Layer(Frontiers.id("verdinite"))), 4.0F, 0.0F));
+                    List.of(new ArmorMaterial.Layer(Frontiers.id("verdinite"))), 3.0F, 0.0F));
     // Frostite
     public static final Holder<ArmorMaterial> FROSTITE_ARMOR_MATERIAL = registerArmorMaterial("frostite",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->
             {
-                map.put(ArmorItem.Type.BOOTS, 5);
-                map.put(ArmorItem.Type.LEGGINGS, 8);
-                map.put(ArmorItem.Type.CHESTPLATE, 10);
-                map.put(ArmorItem.Type.HELMET, 5);
-                map.put(ArmorItem.Type.BODY, 17);
+                map.put(ArmorItem.Type.BOOTS, 4);
+                map.put(ArmorItem.Type.LEGGINGS, 7);
+                map.put(ArmorItem.Type.CHESTPLATE, 9);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BODY, 14);
             }), 15, SoundEvents.ARMOR_EQUIP_DIAMOND, () -> Ingredient.of(FRItems.FROSTITE_INGOT.get()),
-                    List.of(new ArmorMaterial.Layer(Frontiers.id("frostite"))), 4.0F, 0.0F));
+                    List.of(new ArmorMaterial.Layer(Frontiers.id("frostite"))), 3.0F, 0.1F));
     // Vivulite
     public static final Holder<ArmorMaterial> VIVULITE_ARMOR_MATERIAL = registerArmorMaterial("vivulite",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->
             {
-                map.put(ArmorItem.Type.BOOTS, 6);
-                map.put(ArmorItem.Type.LEGGINGS, 9);
-                map.put(ArmorItem.Type.CHESTPLATE, 11);
-                map.put(ArmorItem.Type.HELMET, 6);
-                map.put(ArmorItem.Type.BODY, 20);
+                map.put(ArmorItem.Type.BOOTS, 4);
+                map.put(ArmorItem.Type.LEGGINGS, 7);
+                map.put(ArmorItem.Type.CHESTPLATE, 9);
+                map.put(ArmorItem.Type.HELMET, 4);
+                map.put(ArmorItem.Type.BODY, 14);
             }), 18, SoundEvents.ARMOR_EQUIP_DIAMOND, () -> Ingredient.of(FRItems.VIVULITE_INGOT.get()),
-                    List.of(new ArmorMaterial.Layer(Frontiers.id("vivulite"))), 5.0F, 0.1F));
+                    List.of(new ArmorMaterial.Layer(Frontiers.id("vivulite"))), 3.0F, 0.0F));
     // Brimtan
     public static final Holder<ArmorMaterial> BRIMTAN_ARMOR_MATERIAL = registerArmorMaterial("brimtan",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->
             {
-                map.put(ArmorItem.Type.BOOTS, 7);
-                map.put(ArmorItem.Type.LEGGINGS, 10);
-                map.put(ArmorItem.Type.CHESTPLATE, 12);
-                map.put(ArmorItem.Type.HELMET, 7);
-                map.put(ArmorItem.Type.BODY, 24);
+                map.put(ArmorItem.Type.BOOTS, 5);
+                map.put(ArmorItem.Type.LEGGINGS, 8);
+                map.put(ArmorItem.Type.CHESTPLATE, 10);
+                map.put(ArmorItem.Type.HELMET, 5);
+                map.put(ArmorItem.Type.BODY, 14);
             }), 6, SoundEvents.ARMOR_EQUIP_NETHERITE, () -> Ingredient.of(FRItems.BRIMTAN_INGOT.get()),
-                    List.of(new ArmorMaterial.Layer(Frontiers.id("brimtan"))), 6.0F, 0.1F));
+                    List.of(new ArmorMaterial.Layer(Frontiers.id("brimtan"))), 3.0F, 0.1F));
     // Plate
     public static final Holder<ArmorMaterial> PLATE_ARMOR_MATERIAL = registerArmorMaterial("plate",
             () -> new ArmorMaterial(Util.make(new EnumMap<>(ArmorItem.Type.class), map ->
